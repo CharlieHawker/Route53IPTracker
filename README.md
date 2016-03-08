@@ -17,8 +17,8 @@ The following steps should be taken to prepare the ground for running the tracke
 
 ## Setup
 
-1. Clone the repository into a directory of your choosing
-2. Create a file `config.json` in the same directory, with the following format:
+- Clone the repository into a directory of your choosing
+- Create a file `config.json` in the same directory, with the following format:
 ```
 {
   "domainName": "<trackingDomain>",
@@ -29,9 +29,9 @@ The following steps should be taken to prepare the ground for running the tracke
 Where `<trackingDomain>` should be replaced with the domain (or subdomain) which you want to track the IP address with 
 and `<hostedZoneId>` being the ID of the Route 53 hosted zone for the domain (or subdomain).
 
-3. Add a crontab entry to run the `update.sh` bash script every 5 minutes and (optionally) print the results to a log file:
+- Add a crontab entry to run the `update.sh` bash script every 5 minutes and (optionally) print the results to a log file:
 ```
 */5 * * * * /path/to/directory/update.sh > /path/to/directory/update.log
 ```
 
-4. Relax, your life is now complete. You should now be able to reach the device via any of the ports you set up forwarding for via the domain.
+- *Relax*, your life is now complete. You should now be able to reach the device via any of the ports you set up forwarding for via the domain.
