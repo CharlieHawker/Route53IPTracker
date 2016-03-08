@@ -1,0 +1,18 @@
+{
+  "Comment": "Updates A record with current external IP address",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "",
+        "Type": "A",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "0.0.0.0"
+          }
+        ]
+      }
+    }
+  ]
+}
