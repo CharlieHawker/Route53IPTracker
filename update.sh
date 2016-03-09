@@ -43,7 +43,7 @@ if [ "$old_ip" != "$current_ip" ]; then
 EOF
 
   # Make UPSERT request to AWS for domain name
-  echo $(aws route53 change-resource-record-sets --hosted-zone-id $hosted_zone_id --change-batch file://$DIR/record-set.json)
+  aws route53 change-resource-record-sets --hosted-zone-id $hosted_zone_id --change-batch file://$DIR/record-set.json
 else
   echo Result: IP address has not changed from $current_ip
 fi
